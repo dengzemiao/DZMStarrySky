@@ -293,7 +293,7 @@
         // 流星动画，动画完成后移除
         setTimeout(() => {
           meteor.style.opacity = 0
-          meteor.style.transform = `rotate(315deg) translateX(-${w}px)`
+          meteor.style.transform = `rotate(315deg) translateX(-${Math.max(w, h)}px)`
           // 移除当前流星
           setTimeout(() => {
             meteor.removeChild(meteorTail)
